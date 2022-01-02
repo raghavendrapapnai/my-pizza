@@ -1,0 +1,41 @@
+<div *ngIf="isAdded" class="alert alert-success row" role="alert">
+    <p>Pizza added to cart </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="block col-md-6" *ngFor="let p of pizzas">
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div>
+                        <h5>
+                            <b>{{ p.name }}</b>
+                        </h5>
+                    </div>
+                    <div class="{{ p.type }}"></div>
+                    <br />
+                    <div class="price">
+                        <b>{{ p.price | currency: "INR" }}</b>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div>
+                        <p>{{ p.description }}</p>
+                    </div>
+                    <div>
+                        <p><b>Ingredients:</b> {{ p.ingredients }}</p>
+                    </div>
+                    <div><b>Toppings:</b> {{ p.topping }}</div>
+                </div>
+
+                <div class="col-md-4">
+                    <div><img [src]="p.image" /></div>
+                    <button type="button" class="btn btn-warning" (click)="addToCart(p)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+img {
+    max-height: 70px;
+  }
+  .container {
+    margin-block-end: 50px;
+  }
+  button {
+    margin: auto;
+    display: block;
+  }
+  h5 {
+    color: green;
+    margin-left: 250px;
+  }
+  

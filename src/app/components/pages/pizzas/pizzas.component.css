@@ -1,0 +1,51 @@
+img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .block {
+    border: solid 0.1px gray;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: black 1px 1px 2px;
+  }
+  .container {
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  button {
+    margin: auto;
+    display: block;
+  }
+  .veg {
+    margin: auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+  }
+  .nonveg {
+    margin: auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  }
+  h5 {
+    text-align: center;
+  }
+  .price {
+    margin-top: 40px;
+  }
+  .alert {
+    position:fixed; 
+    text-align: center;
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    z-index:999; 
+    border-radius:2px
+  }

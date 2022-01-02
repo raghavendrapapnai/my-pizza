@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Following are the items available in your cart:</h2>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-success table-bordered">
+                <tbody>
+                    <tr *ngFor="let c of cart">
+                        <td><img [src]="c.image" /></td>
+                        <td>{{ c.name }}</td>
+                        <td>{{ c.price | currency: "INR" }}</td>
+                        <td>{{ c.quantity }}</td>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="deletePizza(c.id)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Grand Total</strong></td>
+                        <td><strong>{{ cartTotal| currency: "INR" }}</strong></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <hr />
+                <button type="button" class="btn btn-success">
+                    Checkout
+                </button>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
